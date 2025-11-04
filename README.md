@@ -104,661 +104,6 @@ Analytics & Reporting Layer
 
 ---
 
----
-
-## 📁 Project Structure
-
-# File Tree: Full-Stack Java POS MS
-
-**Generated:** 11/4/2025, 9:45:27 PM
-**Root Path:** `e:\My Projects\SaaS POS System Using Java Full-Stack Retail & Supermarkets\Source Code & Docs\Full-Stack Java POS MS`
-
-```
-├── 📁 pos-backend
-│   ├── 📁 .mvn
-│   │   └── 📁 wrapper
-│   │       └── 📄 maven-wrapper.properties
-│   ├── 📁 src
-│   │   ├── 📁 main
-│   │   │   ├── 📁 java
-│   │   │   │   └── 📁 com
-│   │   │   │       └── 📁 zosh
-│   │   │   │           ├── 📁 configrations
-│   │   │   │           │   ├── ☕ AppConfig.java
-│   │   │   │           │   ├── ☕ CustomAuthenticationEntryPoint.java
-│   │   │   │           │   ├── ☕ EmailUtil.java
-│   │   │   │           │   ├── ☕ JwtConstant.java
-│   │   │   │           │   ├── ☕ JwtProvider.java
-│   │   │   │           │   ├── ☕ JwtValidator.java
-│   │   │   │           │   └── ☕ SecurityConfig.java
-│   │   │   │           ├── 📁 controller
-│   │   │   │           │   ├── ☕ AdminDashboardController.java
-│   │   │   │           │   ├── ☕ AuthController.java
-│   │   │   │           │   ├── ☕ BranchAnalyticsController.java
-│   │   │   │           │   ├── ☕ BranchController.java
-│   │   │   │           │   ├── ☕ CategoryController.java
-│   │   │   │           │   ├── ☕ CustomerController.java
-│   │   │   │           │   ├── ☕ EmployeeController.java
-│   │   │   │           │   ├── ☕ HomeController.java
-│   │   │   │           │   ├── ☕ InventoryController.java
-│   │   │   │           │   ├── ☕ OrderController.java
-│   │   │   │           │   ├── ☕ PaymentController.java
-│   │   │   │           │   ├── ☕ ProductController.java
-│   │   │   │           │   ├── ☕ RefundController.java
-│   │   │   │           │   ├── ☕ ShiftReportController.java
-│   │   │   │           │   ├── ☕ StoreAnalyticsController.java
-│   │   │   │           │   ├── ☕ StoreController.java
-│   │   │   │           │   ├── ☕ SubscriptionController.java
-│   │   │   │           │   ├── ☕ SubscriptionPlanController.java
-│   │   │   │           │   └── ☕ UserController.java
-│   │   │   │           ├── 📁 domain
-│   │   │   │           │   ├── ☕ BillingCycle.java
-│   │   │   │           │   ├── ☕ InternalCodeEnum.java
-│   │   │   │           │   ├── ☕ OrderStatus.java
-│   │   │   │           │   ├── ☕ PaymentMethod.java
-│   │   │   │           │   ├── ☕ PaymentOrderStatus.java
-│   │   │   │           │   ├── ☕ PaymentStatus.java
-│   │   │   │           │   ├── ☕ PaymentType.java
-│   │   │   │           │   ├── ☕ StoreStatus.java
-│   │   │   │           │   ├── ☕ SubscriptionStatus.java
-│   │   │   │           │   └── ☕ UserRole.java
-│   │   │   │           ├── 📁 exception
-│   │   │   │           │   ├── ☕ AccessDeniedException.java
-│   │   │   │           │   ├── ☕ GlobalExceptionHandler.java
-│   │   │   │           │   ├── ☕ ResourceNotFoundException.java
-│   │   │   │           │   └── ☕ UserException.java
-│   │   │   │           ├── 📁 mapper
-│   │   │   │           │   ├── ☕ AuthResponseMapper.java
-│   │   │   │           │   ├── ☕ BranchMapper.java
-│   │   │   │           │   ├── ☕ CategoryMapper.java
-│   │   │   │           │   ├── ☕ InventoryMapper.java
-│   │   │   │           │   ├── ☕ OrderItemMapper.java
-│   │   │   │           │   ├── ☕ OrderMapper.java
-│   │   │   │           │   ├── ☕ ProductMapper.java
-│   │   │   │           │   ├── ☕ RefundMapper.java
-│   │   │   │           │   ├── ☕ ShiftReportMapper.java
-│   │   │   │           │   ├── ☕ StoreMapper.java
-│   │   │   │           │   ├── ☕ SubscriptionMapper.java
-│   │   │   │           │   └── ☕ UserMapper.java
-│   │   │   │           ├── 📁 messaging
-│   │   │   │           ├── 📁 modal
-│   │   │   │           │   ├── ☕ Branch.java
-│   │   │   │           │   ├── ☕ Category.java
-│   │   │   │           │   ├── ☕ Customer.java
-│   │   │   │           │   ├── ☕ Inventory.java
-│   │   │   │           │   ├── ☕ Order.java
-│   │   │   │           │   ├── ☕ OrderItem.java
-│   │   │   │           │   ├── ☕ PasswordResetToken.java
-│   │   │   │           │   ├── ☕ PaymentOrder.java
-│   │   │   │           │   ├── ☕ PaymentSummary.java
-│   │   │   │           │   ├── ☕ Product.java
-│   │   │   │           │   ├── ☕ Refund.java
-│   │   │   │           │   ├── ☕ ShiftReport.java
-│   │   │   │           │   ├── ☕ Store.java
-│   │   │   │           │   ├── ☕ StoreContact.java
-│   │   │   │           │   ├── ☕ Subscription.java
-│   │   │   │           │   ├── ☕ SubscriptionPlan.java
-│   │   │   │           │   └── ☕ User.java
-│   │   │   │           ├── 📁 payload
-│   │   │   │           │   ├── 📁 AdminAnalysis
-│   │   │   │           │   │   ├── ☕ DashboardSummaryDTO.java
-│   │   │   │           │   │   ├── ☕ StoreRegistrationStatDTO.java
-│   │   │   │           │   │   └── ☕ StoreStatusDistributionDTO.java
-│   │   │   │           │   ├── 📁 StoreAnalysis
-│   │   │   │           │   │   ├── ☕ BranchPerformanceDTO.java
-│   │   │   │           │   │   ├── ☕ BranchSalesDTO.java
-│   │   │   │           │   │   ├── ☕ CategorySalesDTO.java
-│   │   │   │           │   │   ├── ☕ PaymentInsightDTO.java
-│   │   │   │           │   │   ├── ☕ StoreAlertDTO.java
-│   │   │   │           │   │   ├── ☕ StoreOverviewDTO.java
-│   │   │   │           │   │   ├── ☕ TimeSeriesDataDTO.java
-│   │   │   │           │   │   └── ☕ TimeSeriesPointDTO.java
-│   │   │   │           │   ├── 📁 dto
-│   │   │   │           │   │   ├── ☕ BranchDTO.java
-│   │   │   │           │   │   ├── ☕ BranchDashboardOverviewDTO.java
-│   │   │   │           │   │   ├── ☕ CashierPerformanceDTO.java
-│   │   │   │           │   │   ├── ☕ CategoryDTO.java
-│   │   │   │           │   │   ├── ☕ CategorySalesDTO.java
-│   │   │   │           │   │   ├── ☕ DailySalesDTO.java
-│   │   │   │           │   │   ├── ☕ InventoryDTO.java
-│   │   │   │           │   │   ├── ☕ OrderDTO.java
-│   │   │   │           │   │   ├── ☕ OrderItemDTO.java
-│   │   │   │           │   │   ├── ☕ ProductDTO.java
-│   │   │   │           │   │   ├── ☕ ProductPerformanceDTO.java
-│   │   │   │           │   │   ├── ☕ RefundDTO.java
-│   │   │   │           │   │   ├── ☕ ShiftReportDTO.java
-│   │   │   │           │   │   ├── ☕ StoreDTO.java
-│   │   │   │           │   │   ├── ☕ SubscriptionDTO.java
-│   │   │   │           │   │   └── ☕ UserDTO.java
-│   │   │   │           │   ├── 📁 request
-│   │   │   │           │   │   ├── ☕ ForgotPasswordRequest.java
-│   │   │   │           │   │   ├── ☕ LoginDto.java
-│   │   │   │           │   │   └── ☕ ResetPasswordRequest.java
-│   │   │   │           │   └── 📁 response
-│   │   │   │           │       ├── ☕ ApiResponse.java
-│   │   │   │           │       ├── ☕ ApiResponseBody.java
-│   │   │   │           │       ├── ☕ AuthResponse.java
-│   │   │   │           │       ├── ☕ ExceptionResponse.java
-│   │   │   │           │       └── ☕ PaymentLinkResponse.java
-│   │   │   │           ├── 📁 repository
-│   │   │   │           │   ├── ☕ BranchRepository.java
-│   │   │   │           │   ├── ☕ CategoryRepository.java
-│   │   │   │           │   ├── ☕ CustomerRepository.java
-│   │   │   │           │   ├── ☕ InventoryRepository.java
-│   │   │   │           │   ├── ☕ OrderItemRepository.java
-│   │   │   │           │   ├── ☕ OrderRepository.java
-│   │   │   │           │   ├── ☕ PasswordResetTokenRepository.java
-│   │   │   │           │   ├── ☕ PaymentOrderRepository.java
-│   │   │   │           │   ├── ☕ ProductRepository.java
-│   │   │   │           │   ├── ☕ RefundRepository.java
-│   │   │   │           │   ├── ☕ ShiftReportRepository.java
-│   │   │   │           │   ├── ☕ StoreRepository.java
-│   │   │   │           │   ├── ☕ SubscriptionPlanRepository.java
-│   │   │   │           │   ├── ☕ SubscriptionRepository.java
-│   │   │   │           │   └── ☕ UserRepository.java
-│   │   │   │           ├── 📁 service
-│   │   │   │           │   ├── 📁 impl
-│   │   │   │           │   │   ├── ☕ AdminDashboardServiceImpl.java
-│   │   │   │           │   │   ├── ☕ AuthServiceImpl.java
-│   │   │   │           │   │   ├── ☕ BranchAnalyticsServiceImpl.java
-│   │   │   │           │   │   ├── ☕ BranchServiceImpl.java
-│   │   │   │           │   │   ├── ☕ CategoryServiceImpl.java
-│   │   │   │           │   │   ├── ☕ CustomUserImplementation.java
-│   │   │   │           │   │   ├── ☕ CustomerServiceImpl.java
-│   │   │   │           │   │   ├── ☕ DataInitializationComponent.java
-│   │   │   │           │   │   ├── ☕ EmailServiceImpl.java
-│   │   │   │           │   │   ├── ☕ EmployeeServiceImpl.java
-│   │   │   │           │   │   ├── ☕ InventoryServiceImpl.java
-│   │   │   │           │   │   ├── ☕ OrderServiceImpl.java
-│   │   │   │           │   │   ├── ☕ PaymentServiceImpl.java
-│   │   │   │           │   │   ├── ☕ ProductServiceImpl.java
-│   │   │   │           │   │   ├── ☕ RefundServiceImpl.java
-│   │   │   │           │   │   ├── ☕ ShiftReportServiceImpl.java
-│   │   │   │           │   │   ├── ☕ StoreAnalyticsServiceImpl.java
-│   │   │   │           │   │   ├── ☕ StoreServiceImpl.java
-│   │   │   │           │   │   ├── ☕ SubscriptionPlanServiceImpl.java
-│   │   │   │           │   │   ├── ☕ SubscriptionServiceImpl.java
-│   │   │   │           │   │   └── ☕ UserServiceImpl.java
-│   │   │   │           │   ├── ☕ AdminDashboardService.java
-│   │   │   │           │   ├── ☕ AuthService.java
-│   │   │   │           │   ├── ☕ BranchAnalyticsService.java
-│   │   │   │           │   ├── ☕ BranchService.java
-│   │   │   │           │   ├── ☕ CategoryService.java
-│   │   │   │           │   ├── ☕ CustomerService.java
-│   │   │   │           │   ├── ☕ EmailService.java
-│   │   │   │           │   ├── ☕ EmployeeService.java
-│   │   │   │           │   ├── ☕ InventoryService.java
-│   │   │   │           │   ├── ☕ OrderService.java
-│   │   │   │           │   ├── ☕ PaymentService.java
-│   │   │   │           │   ├── ☕ ProductService.java
-│   │   │   │           │   ├── ☕ RefundService.java
-│   │   │   │           │   ├── ☕ ShiftReportService.java
-│   │   │   │           │   ├── ☕ StoreAnalyticsService.java
-│   │   │   │           │   ├── ☕ StoreService.java
-│   │   │   │           │   ├── ☕ SubscriptionPlanService.java
-│   │   │   │           │   ├── ☕ SubscriptionService.java
-│   │   │   │           │   └── ☕ UserService.java
-│   │   │   │           ├── 📁 util
-│   │   │   │           │   └── ☕ SecurityUtil.java
-│   │   │   │           └── ☕ PosSystemApplication.java
-│   │   │   └── 📁 resources
-│   │   │       ├── 📁 static
-│   │   │       ├── 📁 templates
-│   │   │       ├── ⚙️ application.yml
-│   │   │       └── ⚙️ docker-compose.yml
-│   │   └── 📁 test
-│   │       └── 📁 java
-│   │           └── 📁 com
-│   │               └── 📁 zosh
-│   │                   └── ☕ PosSystemApplicationTests.java
-│   ├── ⚙️ .gitattributes
-│   ├── ⚙️ .gitignore
-│   ├── 📝 HELP.md
-│   ├── 📄 mvnw
-│   ├── 📄 mvnw.cmd
-│   └── ⚙️ pom.xml
-├── 📁 pos-frontend-vite
-│   ├── 📁 public
-│   │   ├── 🖼️ benefits-illustration.svg
-│   │   ├── 🖼️ branch-management-preview.svg
-│   │   ├── 🖼️ header-preview.svg
-│   │   ├── 🖼️ landing-page-preview.svg
-│   │   ├── 🖼️ pos-mockup.svg
-│   │   ├── 🖼️ trusted-logos-preview.svg
-│   │   └── 🖼️ vite.svg
-│   ├── 📁 src
-│   │   ├── 📁 Redux Toolkit
-│   │   │   ├── 📁 features
-│   │   │   │   ├── 📁 adminDashboard
-│   │   │   │   │   ├── 📄 adminDashboardSlice.js
-│   │   │   │   │   └── 📄 adminDashboardThunks.js
-│   │   │   │   ├── 📁 auth
-│   │   │   │   │   ├── 📄 authSlice.js
-│   │   │   │   │   └── 📄 authThunk.js
-│   │   │   │   ├── 📁 branch
-│   │   │   │   │   ├── 📄 branchSlice.js
-│   │   │   │   │   └── 📄 branchThunks.js
-│   │   │   │   ├── 📁 branchAnalytics
-│   │   │   │   │   ├── 📄 branchAnalyticsSlice.js
-│   │   │   │   │   └── 📄 branchAnalyticsThunks.js
-│   │   │   │   ├── 📁 cart
-│   │   │   │   │   └── 📄 cartSlice.js
-│   │   │   │   ├── 📁 category
-│   │   │   │   │   ├── 📄 categorySlice.js
-│   │   │   │   │   └── 📄 categoryThunks.js
-│   │   │   │   ├── 📁 customer
-│   │   │   │   │   ├── 📄 customerSlice.js
-│   │   │   │   │   └── 📄 customerThunks.js
-│   │   │   │   ├── 📁 employee
-│   │   │   │   │   ├── 📄 employeeSlice.js
-│   │   │   │   │   └── 📄 employeeThunks.js
-│   │   │   │   ├── 📁 inventory
-│   │   │   │   │   ├── 📄 inventorySlice.js
-│   │   │   │   │   └── 📄 inventoryThunks.js
-│   │   │   │   ├── 📁 onboarding
-│   │   │   │   │   ├── 📄 onboardingSlice.js
-│   │   │   │   │   └── 📄 onboardingThunk.js
-│   │   │   │   ├── 📁 order
-│   │   │   │   │   ├── 📄 orderSlice.js
-│   │   │   │   │   └── 📄 orderThunks.js
-│   │   │   │   ├── 📁 payment
-│   │   │   │   │   ├── 📄 paymentSlice.js
-│   │   │   │   │   └── 📄 paymentThunks.js
-│   │   │   │   ├── 📁 product
-│   │   │   │   │   ├── 📄 productSlice.js
-│   │   │   │   │   └── 📄 productThunks.js
-│   │   │   │   ├── 📁 refund
-│   │   │   │   │   ├── 📄 refundSlice.js
-│   │   │   │   │   └── 📄 refundThunks.js
-│   │   │   │   ├── 📁 sale
-│   │   │   │   │   ├── 📄 saleSlice.js
-│   │   │   │   │   └── 📄 saleThunks.js
-│   │   │   │   ├── 📁 shiftReport
-│   │   │   │   │   ├── 📄 shiftReportSlice.js
-│   │   │   │   │   └── 📄 shiftReportThunks.js
-│   │   │   │   ├── 📁 store
-│   │   │   │   │   ├── 📄 storeSlice.js
-│   │   │   │   │   └── 📄 storeThunks.js
-│   │   │   │   ├── 📁 storeAnalytics
-│   │   │   │   │   ├── 📄 storeAnalyticsSlice.js
-│   │   │   │   │   └── 📄 storeAnalyticsThunks.js
-│   │   │   │   ├── 📁 subscription
-│   │   │   │   │   ├── 📄 subscriptionSlice.js
-│   │   │   │   │   └── 📄 subscriptionThunks.js
-│   │   │   │   ├── 📁 subscriptionPlan
-│   │   │   │   │   ├── 📄 subscriptionPlanSlice.js
-│   │   │   │   │   └── 📄 subscriptionPlanThunks.js
-│   │   │   │   ├── 📁 transaction
-│   │   │   │   │   ├── 📄 transactionSlice.js
-│   │   │   │   │   └── 📄 transactionThunks.js
-│   │   │   │   └── 📁 user
-│   │   │   │       ├── 📄 userSlice.js
-│   │   │   │       └── 📄 userThunks.js
-│   │   │   └── 📄 globleState.js
-│   │   ├── 📁 assets
-│   │   │   └── 🖼️ react.svg
-│   │   ├── 📁 components
-│   │   │   ├── 📁 ui
-│   │   │   │   ├── 📄 accordion.jsx
-│   │   │   │   ├── 📄 alert-dialog.jsx
-│   │   │   │   ├── 📄 alert.jsx
-│   │   │   │   ├── 📄 aspect-ratio.jsx
-│   │   │   │   ├── 📄 avatar.jsx
-│   │   │   │   ├── 📄 badge.jsx
-│   │   │   │   ├── 📄 breadcrumb.jsx
-│   │   │   │   ├── 📄 button.jsx
-│   │   │   │   ├── 📄 calendar.jsx
-│   │   │   │   ├── 📄 card.jsx
-│   │   │   │   ├── 📄 carousel.jsx
-│   │   │   │   ├── 📄 chart.jsx
-│   │   │   │   ├── 📄 checkbox.jsx
-│   │   │   │   ├── 📄 collapsible.jsx
-│   │   │   │   ├── 📄 command.jsx
-│   │   │   │   ├── 📄 context-menu.jsx
-│   │   │   │   ├── 📄 dialog.jsx
-│   │   │   │   ├── 📄 drawer.jsx
-│   │   │   │   ├── 📄 dropdown-menu.jsx
-│   │   │   │   ├── 📄 form.jsx
-│   │   │   │   ├── 📄 hover-card.jsx
-│   │   │   │   ├── 📄 input-otp.jsx
-│   │   │   │   ├── 📄 input.jsx
-│   │   │   │   ├── 📄 label.jsx
-│   │   │   │   ├── 📄 menubar.jsx
-│   │   │   │   ├── 📄 navigation-menu.jsx
-│   │   │   │   ├── 📄 pagination.jsx
-│   │   │   │   ├── 📄 popover.jsx
-│   │   │   │   ├── 📄 progress.jsx
-│   │   │   │   ├── 📄 radio-group.jsx
-│   │   │   │   ├── 📄 resizable.jsx
-│   │   │   │   ├── 📄 scroll-area.jsx
-│   │   │   │   ├── 📄 select.jsx
-│   │   │   │   ├── 📄 separator.jsx
-│   │   │   │   ├── 📄 sheet.jsx
-│   │   │   │   ├── 📄 sidebar.jsx
-│   │   │   │   ├── 📄 skeleton.jsx
-│   │   │   │   ├── 📄 slider.jsx
-│   │   │   │   ├── 📄 sonner.jsx
-│   │   │   │   ├── 📄 switch.jsx
-│   │   │   │   ├── 📄 table.jsx
-│   │   │   │   ├── 📄 tabs.jsx
-│   │   │   │   ├── 📄 textarea.jsx
-│   │   │   │   ├── 📄 toast.jsx
-│   │   │   │   ├── 📄 toggle-group.jsx
-│   │   │   │   ├── 📄 toggle.jsx
-│   │   │   │   ├── 📄 tooltip.jsx
-│   │   │   │   └── 📄 use-toast.jsx
-│   │   │   ├── 📄 theme-provider.jsx
-│   │   │   └── 📄 theme-toggle.jsx
-│   │   ├── 📁 context
-│   │   │   ├── 📁 hooks
-│   │   │   │   └── 📄 useSidebar.js
-│   │   │   ├── 📄 SidebarContext.jsx
-│   │   │   └── 📄 SidebarProvider.jsx
-│   │   ├── 📁 contexts
-│   │   ├── 📁 hooks
-│   │   │   └── 📄 use-mobile.js
-│   │   ├── 📁 lib
-│   │   │   └── 📄 utils.js
-│   │   ├── 📁 pages
-│   │   │   ├── 📁 Branch Manager
-│   │   │   │   ├── 📁 Customers
-│   │   │   │   │   └── 📄 Customers.jsx
-│   │   │   │   ├── 📁 Dashboard
-│   │   │   │   │   ├── 📄 BranchManagerDashboard.jsx
-│   │   │   │   │   ├── 📄 BranchManagerSidebar.jsx
-│   │   │   │   │   ├── 📄 BranchManagerTopbar.jsx
-│   │   │   │   │   ├── 📄 CashierPerformance.jsx
-│   │   │   │   │   ├── 📄 Dashboard.jsx
-│   │   │   │   │   ├── 📄 PaymentBreakdown.jsx
-│   │   │   │   │   ├── 📄 RecentOrders.jsx
-│   │   │   │   │   ├── 📄 SalesChart.jsx
-│   │   │   │   │   ├── 📄 TodayOverview.jsx
-│   │   │   │   │   └── 📄 TopProducts.jsx
-│   │   │   │   ├── 📁 Employees
-│   │   │   │   │   ├── 📄 BranchEmployees.jsx
-│   │   │   │   │   ├── 📄 EmployeeDialogs.jsx
-│   │   │   │   │   ├── 📄 EmployeeStats.jsx
-│   │   │   │   │   ├── 📄 EmployeeTable.jsx
-│   │   │   │   │   └── 📄 index.js
-│   │   │   │   ├── 📁 Inventory
-│   │   │   │   │   ├── 📄 Inventory.jsx
-│   │   │   │   │   ├── 📄 InventoryFilters.jsx
-│   │   │   │   │   ├── 📄 InventoryFormDialog.jsx
-│   │   │   │   │   ├── 📄 InventoryStats.jsx
-│   │   │   │   │   ├── 📄 InventoryTable.jsx
-│   │   │   │   │   └── 📄 ProductSelect.jsx
-│   │   │   │   ├── 📁 Orders
-│   │   │   │   │   ├── 📄 OrderDetailsDialog.jsx
-│   │   │   │   │   ├── 📄 Orders.jsx
-│   │   │   │   │   ├── 📄 OrdersFilters.jsx
-│   │   │   │   │   ├── 📄 OrdersTable.jsx
-│   │   │   │   │   └── 📄 data.js
-│   │   │   │   ├── 📁 Refunds
-│   │   │   │   │   └── 📄 Refunds.jsx
-│   │   │   │   ├── 📁 Reports
-│   │   │   │   │   └── 📄 Reports.jsx
-│   │   │   │   ├── 📁 Settings
-│   │   │   │   │   ├── 📄 BranchInfo.jsx
-│   │   │   │   │   └── 📄 Settings.jsx
-│   │   │   │   ├── 📁 Transaction
-│   │   │   │   │   ├── 📄 TransactionTable.jsx
-│   │   │   │   │   └── 📄 Transactions.jsx
-│   │   │   │   ├── 📄 data.js
-│   │   │   │   └── 📄 index.js
-│   │   │   ├── 📁 SuperAdminDashboard
-│   │   │   │   ├── 📁 components
-│   │   │   │   │   ├── 📄 SuperAdminSidebar.jsx
-│   │   │   │   │   ├── 📄 SuperAdminTopbar.jsx
-│   │   │   │   │   └── 📄 index.js
-│   │   │   │   ├── 📁 settings
-│   │   │   │   │   ├── 📁 components
-│   │   │   │   │   │   ├── 📄 NotificationSettingsForm.jsx
-│   │   │   │   │   │   ├── 📄 ProfileSettingsForm.jsx
-│   │   │   │   │   │   ├── 📄 SecuritySettingsForm.jsx
-│   │   │   │   │   │   ├── 📄 SystemSettingsForm.jsx
-│   │   │   │   │   │   └── 📄 useSettingsState.js
-│   │   │   │   │   └── 📄 SettingsPage.jsx
-│   │   │   │   ├── 📁 store
-│   │   │   │   │   ├── 📄 PendingRequestsPage.jsx
-│   │   │   │   │   ├── 📄 StoreDetailDrawer.jsx
-│   │   │   │   │   ├── 📄 StoreDetailsPage.jsx
-│   │   │   │   │   ├── 📄 StoreListPage.jsx
-│   │   │   │   │   ├── 📄 StoreStatusBadge.jsx
-│   │   │   │   │   └── 📄 StoreTable.jsx
-│   │   │   │   ├── 📁 subscription
-│   │   │   │   │   ├── 📄 AddPlanDialog.jsx
-│   │   │   │   │   ├── 📄 EditPlanDialog.jsx
-│   │   │   │   │   └── 📄 SubscriptionPlansPage.jsx
-│   │   │   │   ├── 📄 CommissionsPage.jsx
-│   │   │   │   ├── 📄 Dashboard.jsx
-│   │   │   │   ├── 📄 ExportsPage.jsx
-│   │   │   │   ├── 📝 README.md
-│   │   │   │   ├── 📄 SuperAdminDashboard.jsx
-│   │   │   │   └── 📄 index.js
-│   │   │   ├── 📁 auth
-│   │   │   ├── 📁 cashier
-│   │   │   │   ├── 📁 ShiftSummary
-│   │   │   │   │   ├── 📁 components
-│   │   │   │   │   │   ├── 📄 LogoutConfirmDialog.jsx
-│   │   │   │   │   │   ├── 📄 PaymentSummaryCard.jsx
-│   │   │   │   │   │   ├── 📄 PrintDialog.jsx
-│   │   │   │   │   │   ├── 📄 RecentOrdersCard.jsx
-│   │   │   │   │   │   ├── 📄 RefundsCard.jsx
-│   │   │   │   │   │   ├── 📄 SalesSummaryCard.jsx
-│   │   │   │   │   │   ├── 📄 ShiftHeader.jsx
-│   │   │   │   │   │   ├── 📄 ShiftInformationCard.jsx
-│   │   │   │   │   │   ├── 📄 TopSellingItemsCard.jsx
-│   │   │   │   │   │   └── 📄 index.js
-│   │   │   │   │   ├── 📁 data
-│   │   │   │   │   │   └── 📄 mockShiftData.js
-│   │   │   │   │   └── 📄 ShiftSummaryPage.jsx
-│   │   │   │   ├── 📁 Sidebar
-│   │   │   │   │   ├── 📄 BranchInfo.jsx
-│   │   │   │   │   ├── 📄 CashierSideBar.jsx
-│   │   │   │   │   └── 📄 navItems.js
-│   │   │   │   ├── 📁 cart
-│   │   │   │   │   ├── 📄 CartItem.jsx
-│   │   │   │   │   ├── 📄 CartSection.jsx
-│   │   │   │   │   └── 📄 CartSummary.jsx
-│   │   │   │   ├── 📁 components
-│   │   │   │   │   ├── 📄 HeldOrdersDialog.jsx
-│   │   │   │   │   ├── 📄 POSHeader.jsx
-│   │   │   │   │   └── 📄 ReceiptDialog.jsx
-│   │   │   │   ├── 📁 customer
-│   │   │   │   │   ├── 📁 components
-│   │   │   │   │   │   ├── 📄 AddPointsDialog.jsx
-│   │   │   │   │   │   ├── 📄 CustomerCard.jsx
-│   │   │   │   │   │   ├── 📄 CustomerDetails.jsx
-│   │   │   │   │   │   ├── 📄 CustomerList.jsx
-│   │   │   │   │   │   ├── 📄 CustomerSearch.jsx
-│   │   │   │   │   │   ├── 📄 PurchaseHistory.jsx
-│   │   │   │   │   │   └── 📄 index.js
-│   │   │   │   │   ├── 📁 data
-│   │   │   │   │   ├── 📁 utils
-│   │   │   │   │   │   └── 📄 customerUtils.js
-│   │   │   │   │   ├── 📄 CustomerDialog.jsx
-│   │   │   │   │   ├── 📄 CustomerForm.jsx
-│   │   │   │   │   └── 📄 CustomerLookupPage.jsx
-│   │   │   │   ├── 📁 order
-│   │   │   │   │   ├── 📁 OrderDetails
-│   │   │   │   │   │   ├── 📄 CustomerInformation.jsx
-│   │   │   │   │   │   ├── 📄 InvoiceDialog.jsx
-│   │   │   │   │   │   ├── 📄 OrderDetails.jsx
-│   │   │   │   │   │   └── 📄 OrderInformation.jsx
-│   │   │   │   │   ├── 📁 pdf
-│   │   │   │   │   │   ├── 📄 OrderPDF.jsx
-│   │   │   │   │   │   ├── 📄 pdfStyles.jsx
-│   │   │   │   │   │   └── 📄 pdfUtils.jsx
-│   │   │   │   │   ├── 📄 OrderHistoryPage.jsx
-│   │   │   │   │   ├── 📄 OrderTable.jsx
-│   │   │   │   │   └── 📄 data.js
-│   │   │   │   ├── 📁 payment
-│   │   │   │   │   ├── 📄 CustomerPaymentSection.jsx
-│   │   │   │   │   ├── 📄 CustomerSection.jsx
-│   │   │   │   │   ├── 📄 DiscountSection.jsx
-│   │   │   │   │   ├── 📄 NoteSection.jsx
-│   │   │   │   │   ├── 📄 PaymentDialog.jsx
-│   │   │   │   │   ├── 📄 PaymentSection.jsx
-│   │   │   │   │   └── 📄 data.js
-│   │   │   │   ├── 📁 product
-│   │   │   │   │   ├── 📄 ProductCard.jsx
-│   │   │   │   │   └── 📄 ProductSection.jsx
-│   │   │   │   ├── 📁 return
-│   │   │   │   │   ├── 📁 components
-│   │   │   │   │   │   ├── 📄 OrderDetailsSection.jsx
-│   │   │   │   │   │   ├── 📄 OrderTable.jsx
-│   │   │   │   │   │   ├── 📄 ReturnItemsSection.jsx
-│   │   │   │   │   │   ├── 📄 ReturnReceiptDialog.jsx
-│   │   │   │   │   │   └── 📄 index.js
-│   │   │   │   │   └── 📄 ReturnOrderPage.jsx
-│   │   │   │   ├── 📄 CashierDashboardLayout.jsx
-│   │   │   │   ├── 📄 CreateOrderPage.jsx
-│   │   │   │   └── 📝 README.md
-│   │   │   ├── 📁 common
-│   │   │   │   ├── 📁 Auth
-│   │   │   │   │   ├── 📄 Login.jsx
-│   │   │   │   │   └── 📄 ResetPassword.jsx
-│   │   │   │   ├── 📁 Demo
-│   │   │   │   ├── 📁 Landing
-│   │   │   │   │   ├── 📁 components
-│   │   │   │   │   │   ├── 📄 TypewriterText.jsx
-│   │   │   │   │   │   └── 📄 index.js
-│   │   │   │   │   ├── 📄 ContactSection.jsx
-│   │   │   │   │   ├── 📄 FAQSection.jsx
-│   │   │   │   │   ├── 📄 FeatureComparisonSection.jsx
-│   │   │   │   │   ├── 📄 FeatureComparisonTable.jsx
-│   │   │   │   │   ├── 📄 FetureSection.jsx
-│   │   │   │   │   ├── 📄 Footer.jsx
-│   │   │   │   │   ├── 📄 Header.jsx
-│   │   │   │   │   ├── 📄 HeroSection.jsx
-│   │   │   │   │   ├── 📄 KeyFeaturesSection.jsx
-│   │   │   │   │   ├── 📄 Landing.jsx
-│   │   │   │   │   ├── 📄 LiveDemoSection.jsx
-│   │   │   │   │   ├── 📄 MobileAppShowcase.jsx
-│   │   │   │   │   ├── 📄 PricingCalculator.jsx
-│   │   │   │   │   ├── 📄 PricingSection.jsx
-│   │   │   │   │   ├── 📄 TestimonialCarousel.jsx
-│   │   │   │   │   ├── 📄 TrustedLogos.jsx
-│   │   │   │   │   └── 📄 WhyChooseUsSection.jsx
-│   │   │   │   ├── 📁 Order
-│   │   │   │   │   └── 📄 OrderItemTable.jsx
-│   │   │   │   └── 📄 PageNotFound.jsx
-│   │   │   ├── 📁 components
-│   │   │   ├── 📁 onboarding
-│   │   │   │   ├── 📄 Onboarding.jsx
-│   │   │   │   ├── 📄 OwnerDetailsForm.jsx
-│   │   │   │   ├── 📝 README.md
-│   │   │   │   ├── 📄 StoreDetailsForm.jsx
-│   │   │   │   └── 📄 index.js
-│   │   │   └── 📁 store
-│   │   │       ├── 📁 Alerts
-│   │   │       │   ├── 📄 Alerts.jsx
-│   │   │       │   ├── 📄 InactiveCashierTable.jsx
-│   │   │       │   ├── 📄 LowStockProductTable.jsx
-│   │   │       │   ├── 📄 NoSaleTodayBranchTable.jsx
-│   │   │       │   └── 📄 RefundSpikeTable.jsx
-│   │   │       ├── 📁 Branch
-│   │   │       │   ├── 📄 BranchForm.jsx
-│   │   │       │   ├── 📄 BranchTable.jsx
-│   │   │       │   ├── 📄 Branches.jsx
-│   │   │       │   └── 📄 index.js
-│   │   │       ├── 📁 Category
-│   │   │       │   ├── 📄 Categories.jsx
-│   │   │       │   ├── 📄 CategoryForm.jsx
-│   │   │       │   ├── 📄 CategoryTable.jsx
-│   │   │       │   └── 📄 index.js
-│   │   │       ├── 📁 Dashboard
-│   │   │       │   ├── 📄 Dashboard.jsx
-│   │   │       │   ├── 📄 DashboardStats.jsx
-│   │   │       │   ├── 📄 RecentSales.jsx
-│   │   │       │   ├── 📄 SalesTrend.jsx
-│   │   │       │   ├── 📄 StoreDashboard.jsx
-│   │   │       │   ├── 📄 StoreSidebar.jsx
-│   │   │       │   ├── 📄 StoreTopbar.jsx
-│   │   │       │   └── 📄 index.js
-│   │   │       ├── 📁 Employee
-│   │   │       │   ├── 📄 EmployeeForm.jsx
-│   │   │       │   ├── 📄 EmployeeTable.jsx
-│   │   │       │   ├── 📄 StoreEmployees.jsx
-│   │   │       │   └── 📄 index.js
-│   │   │       ├── 📁 Product
-│   │   │       │   ├── 📄 CreateProductForm.jsx
-│   │   │       │   ├── 📄 ProductDetails.jsx
-│   │   │       │   ├── 📄 ProductForm.jsx
-│   │   │       │   ├── 📄 ProductSearch.jsx
-│   │   │       │   ├── 📄 ProductTable.jsx
-│   │   │       │   ├── 📄 Products.jsx
-│   │   │       │   └── 📄 index.js
-│   │   │       ├── 📁 Settings
-│   │   │       │   ├── 📁 components
-│   │   │       │   │   ├── 📄 NotificationSettings.jsx
-│   │   │       │   │   ├── 📄 PaymentSettings.jsx
-│   │   │       │   │   ├── 📄 SecuritySettings.jsx
-│   │   │       │   │   ├── 📄 SettingsContent.jsx
-│   │   │       │   │   ├── 📄 SettingsHeader.jsx
-│   │   │       │   │   ├── 📄 SettingsNavigation.jsx
-│   │   │       │   │   ├── 📄 StoreSettings.jsx
-│   │   │       │   │   ├── 📄 StoreSettingsForm.jsx
-│   │   │       │   │   ├── 📄 ToggleSwitch.jsx
-│   │   │       │   │   ├── 📄 formUtils.js
-│   │   │       │   │   ├── 📄 index.js
-│   │   │       │   │   └── 📄 validation.js
-│   │   │       │   └── 📄 Settings.jsx
-│   │   │       ├── 📁 store-admin
-│   │   │       │   ├── 📄 Reports.jsx
-│   │   │       │   ├── 📄 Sales.jsx
-│   │   │       │   └── 📄 index.js
-│   │   │       ├── 📁 storeInformation
-│   │   │       │   ├── 📁 components
-│   │   │       │   │   ├── 📄 BasicInformation.jsx
-│   │   │       │   │   ├── 📄 ContactInformation.jsx
-│   │   │       │   │   ├── 📄 EditStoreDialog.jsx
-│   │   │       │   │   ├── 📄 EditStoreForm.jsx
-│   │   │       │   │   ├── 📄 EmptyState.jsx
-│   │   │       │   │   ├── 📄 LoadingState.jsx
-│   │   │       │   │   ├── 📄 StoreHeader.jsx
-│   │   │       │   │   ├── 📄 StoreInfoCard.jsx
-│   │   │       │   │   ├── 📄 formUtils.js
-│   │   │       │   │   ├── 📄 index.js
-│   │   │       │   │   └── 📄 validation.js
-│   │   │       │   └── 📄 Stores.jsx
-│   │   │       └── 📁 upgrade
-│   │   │           └── 📄 Upgrade.jsx
-│   │   ├── 📁 routes
-│   │   │   ├── 📄 AuthRoutes.jsx
-│   │   │   ├── 📄 BranchManagerRoutes.jsx
-│   │   │   ├── 📄 CashierRoutes.jsx
-│   │   │   ├── 📄 StoreRoutes.jsx
-│   │   │   └── 📄 SuperAdminRoutes.jsx
-│   │   ├── 📁 utils
-│   │   │   ├── 📄 api.js
-│   │   │   ├── 📄 formateDate.js
-│   │   │   ├── 📄 getPaymentIcon.jsx
-│   │   │   ├── 📄 getStatusColor.js
-│   │   │   ├── 📄 paymentMethodLable.js
-│   │   │   ├── 📄 uploadToCloudinary.js
-│   │   │   └── 📄 userRole.js
-│   │   ├── 🎨 App.css
-│   │   ├── 📄 App.jsx
-│   │   ├── 🎨 index.css
-│   │   └── 📄 main.jsx
-│   ├── ⚙️ .gitignore
-│   ├── 📝 README.md
-│   ├── ⚙️ components.json
-│   ├── 📄 eslint.config.js
-│   ├── 🌐 index.html
-│   ├── ⚙️ jsconfig.app.json
-│   ├── ⚙️ jsconfig.json
-│   ├── ⚙️ package.json
-│   ├── ⚙️ pnpm-lock.yaml
-│   └── 📄 vite.config.js
-└── 📝 README.md
-```
-
----
-
-_Generated by FileTree Pro Extension_
-
 ## 📡 API Overview
 
 | Method | Endpoint             | Description           |
@@ -819,5 +164,662 @@ This project is licensed under the **MIT License** – feel free to use and modi
 > 💡 _“Empowering Retail Through Automation.”_
 
 ```
+
+---
+
+## 📁 Project Structure
+
+# File Tree: Full-Stack Java POS MS
+
+**Generated:** 11/4/2025, 9:45:27 PM
+**Root Path:** `e:\My Projects\SaaS POS System Using Java Full-Stack Retail & Supermarkets\Source Code & Docs\Full-Stack Java POS MS`
+
+```
+
+├── 📁 pos-backend
+│ ├── 📁 .mvn
+│ │ └── 📁 wrapper
+│ │ └── 📄 maven-wrapper.properties
+│ ├── 📁 src
+│ │ ├── 📁 main
+│ │ │ ├── 📁 java
+│ │ │ │ └── 📁 com
+│ │ │ │ └── 📁 zosh
+│ │ │ │ ├── 📁 configrations
+│ │ │ │ │ ├── ☕ AppConfig.java
+│ │ │ │ │ ├── ☕ CustomAuthenticationEntryPoint.java
+│ │ │ │ │ ├── ☕ EmailUtil.java
+│ │ │ │ │ ├── ☕ JwtConstant.java
+│ │ │ │ │ ├── ☕ JwtProvider.java
+│ │ │ │ │ ├── ☕ JwtValidator.java
+│ │ │ │ │ └── ☕ SecurityConfig.java
+│ │ │ │ ├── 📁 controller
+│ │ │ │ │ ├── ☕ AdminDashboardController.java
+│ │ │ │ │ ├── ☕ AuthController.java
+│ │ │ │ │ ├── ☕ BranchAnalyticsController.java
+│ │ │ │ │ ├── ☕ BranchController.java
+│ │ │ │ │ ├── ☕ CategoryController.java
+│ │ │ │ │ ├── ☕ CustomerController.java
+│ │ │ │ │ ├── ☕ EmployeeController.java
+│ │ │ │ │ ├── ☕ HomeController.java
+│ │ │ │ │ ├── ☕ InventoryController.java
+│ │ │ │ │ ├── ☕ OrderController.java
+│ │ │ │ │ ├── ☕ PaymentController.java
+│ │ │ │ │ ├── ☕ ProductController.java
+│ │ │ │ │ ├── ☕ RefundController.java
+│ │ │ │ │ ├── ☕ ShiftReportController.java
+│ │ │ │ │ ├── ☕ StoreAnalyticsController.java
+│ │ │ │ │ ├── ☕ StoreController.java
+│ │ │ │ │ ├── ☕ SubscriptionController.java
+│ │ │ │ │ ├── ☕ SubscriptionPlanController.java
+│ │ │ │ │ └── ☕ UserController.java
+│ │ │ │ ├── 📁 domain
+│ │ │ │ │ ├── ☕ BillingCycle.java
+│ │ │ │ │ ├── ☕ InternalCodeEnum.java
+│ │ │ │ │ ├── ☕ OrderStatus.java
+│ │ │ │ │ ├── ☕ PaymentMethod.java
+│ │ │ │ │ ├── ☕ PaymentOrderStatus.java
+│ │ │ │ │ ├── ☕ PaymentStatus.java
+│ │ │ │ │ ├── ☕ PaymentType.java
+│ │ │ │ │ ├── ☕ StoreStatus.java
+│ │ │ │ │ ├── ☕ SubscriptionStatus.java
+│ │ │ │ │ └── ☕ UserRole.java
+│ │ │ │ ├── 📁 exception
+│ │ │ │ │ ├── ☕ AccessDeniedException.java
+│ │ │ │ │ ├── ☕ GlobalExceptionHandler.java
+│ │ │ │ │ ├── ☕ ResourceNotFoundException.java
+│ │ │ │ │ └── ☕ UserException.java
+│ │ │ │ ├── 📁 mapper
+│ │ │ │ │ ├── ☕ AuthResponseMapper.java
+│ │ │ │ │ ├── ☕ BranchMapper.java
+│ │ │ │ │ ├── ☕ CategoryMapper.java
+│ │ │ │ │ ├── ☕ InventoryMapper.java
+│ │ │ │ │ ├── ☕ OrderItemMapper.java
+│ │ │ │ │ ├── ☕ OrderMapper.java
+│ │ │ │ │ ├── ☕ ProductMapper.java
+│ │ │ │ │ ├── ☕ RefundMapper.java
+│ │ │ │ │ ├── ☕ ShiftReportMapper.java
+│ │ │ │ │ ├── ☕ StoreMapper.java
+│ │ │ │ │ ├── ☕ SubscriptionMapper.java
+│ │ │ │ │ └── ☕ UserMapper.java
+│ │ │ │ ├── 📁 messaging
+│ │ │ │ ├── 📁 modal
+│ │ │ │ │ ├── ☕ Branch.java
+│ │ │ │ │ ├── ☕ Category.java
+│ │ │ │ │ ├── ☕ Customer.java
+│ │ │ │ │ ├── ☕ Inventory.java
+│ │ │ │ │ ├── ☕ Order.java
+│ │ │ │ │ ├── ☕ OrderItem.java
+│ │ │ │ │ ├── ☕ PasswordResetToken.java
+│ │ │ │ │ ├── ☕ PaymentOrder.java
+│ │ │ │ │ ├── ☕ PaymentSummary.java
+│ │ │ │ │ ├── ☕ Product.java
+│ │ │ │ │ ├── ☕ Refund.java
+│ │ │ │ │ ├── ☕ ShiftReport.java
+│ │ │ │ │ ├── ☕ Store.java
+│ │ │ │ │ ├── ☕ StoreContact.java
+│ │ │ │ │ ├── ☕ Subscription.java
+│ │ │ │ │ ├── ☕ SubscriptionPlan.java
+│ │ │ │ │ └── ☕ User.java
+│ │ │ │ ├── 📁 payload
+│ │ │ │ │ ├── 📁 AdminAnalysis
+│ │ │ │ │ │ ├── ☕ DashboardSummaryDTO.java
+│ │ │ │ │ │ ├── ☕ StoreRegistrationStatDTO.java
+│ │ │ │ │ │ └── ☕ StoreStatusDistributionDTO.java
+│ │ │ │ │ ├── 📁 StoreAnalysis
+│ │ │ │ │ │ ├── ☕ BranchPerformanceDTO.java
+│ │ │ │ │ │ ├── ☕ BranchSalesDTO.java
+│ │ │ │ │ │ ├── ☕ CategorySalesDTO.java
+│ │ │ │ │ │ ├── ☕ PaymentInsightDTO.java
+│ │ │ │ │ │ ├── ☕ StoreAlertDTO.java
+│ │ │ │ │ │ ├── ☕ StoreOverviewDTO.java
+│ │ │ │ │ │ ├── ☕ TimeSeriesDataDTO.java
+│ │ │ │ │ │ └── ☕ TimeSeriesPointDTO.java
+│ │ │ │ │ ├── 📁 dto
+│ │ │ │ │ │ ├── ☕ BranchDTO.java
+│ │ │ │ │ │ ├── ☕ BranchDashboardOverviewDTO.java
+│ │ │ │ │ │ ├── ☕ CashierPerformanceDTO.java
+│ │ │ │ │ │ ├── ☕ CategoryDTO.java
+│ │ │ │ │ │ ├── ☕ CategorySalesDTO.java
+│ │ │ │ │ │ ├── ☕ DailySalesDTO.java
+│ │ │ │ │ │ ├── ☕ InventoryDTO.java
+│ │ │ │ │ │ ├── ☕ OrderDTO.java
+│ │ │ │ │ │ ├── ☕ OrderItemDTO.java
+│ │ │ │ │ │ ├── ☕ ProductDTO.java
+│ │ │ │ │ │ ├── ☕ ProductPerformanceDTO.java
+│ │ │ │ │ │ ├── ☕ RefundDTO.java
+│ │ │ │ │ │ ├── ☕ ShiftReportDTO.java
+│ │ │ │ │ │ ├── ☕ StoreDTO.java
+│ │ │ │ │ │ ├── ☕ SubscriptionDTO.java
+│ │ │ │ │ │ └── ☕ UserDTO.java
+│ │ │ │ │ ├── 📁 request
+│ │ │ │ │ │ ├── ☕ ForgotPasswordRequest.java
+│ │ │ │ │ │ ├── ☕ LoginDto.java
+│ │ │ │ │ │ └── ☕ ResetPasswordRequest.java
+│ │ │ │ │ └── 📁 response
+│ │ │ │ │ ├── ☕ ApiResponse.java
+│ │ │ │ │ ├── ☕ ApiResponseBody.java
+│ │ │ │ │ ├── ☕ AuthResponse.java
+│ │ │ │ │ ├── ☕ ExceptionResponse.java
+│ │ │ │ │ └── ☕ PaymentLinkResponse.java
+│ │ │ │ ├── 📁 repository
+│ │ │ │ │ ├── ☕ BranchRepository.java
+│ │ │ │ │ ├── ☕ CategoryRepository.java
+│ │ │ │ │ ├── ☕ CustomerRepository.java
+│ │ │ │ │ ├── ☕ InventoryRepository.java
+│ │ │ │ │ ├── ☕ OrderItemRepository.java
+│ │ │ │ │ ├── ☕ OrderRepository.java
+│ │ │ │ │ ├── ☕ PasswordResetTokenRepository.java
+│ │ │ │ │ ├── ☕ PaymentOrderRepository.java
+│ │ │ │ │ ├── ☕ ProductRepository.java
+│ │ │ │ │ ├── ☕ RefundRepository.java
+│ │ │ │ │ ├── ☕ ShiftReportRepository.java
+│ │ │ │ │ ├── ☕ StoreRepository.java
+│ │ │ │ │ ├── ☕ SubscriptionPlanRepository.java
+│ │ │ │ │ ├── ☕ SubscriptionRepository.java
+│ │ │ │ │ └── ☕ UserRepository.java
+│ │ │ │ ├── 📁 service
+│ │ │ │ │ ├── 📁 impl
+│ │ │ │ │ │ ├── ☕ AdminDashboardServiceImpl.java
+│ │ │ │ │ │ ├── ☕ AuthServiceImpl.java
+│ │ │ │ │ │ ├── ☕ BranchAnalyticsServiceImpl.java
+│ │ │ │ │ │ ├── ☕ BranchServiceImpl.java
+│ │ │ │ │ │ ├── ☕ CategoryServiceImpl.java
+│ │ │ │ │ │ ├── ☕ CustomUserImplementation.java
+│ │ │ │ │ │ ├── ☕ CustomerServiceImpl.java
+│ │ │ │ │ │ ├── ☕ DataInitializationComponent.java
+│ │ │ │ │ │ ├── ☕ EmailServiceImpl.java
+│ │ │ │ │ │ ├── ☕ EmployeeServiceImpl.java
+│ │ │ │ │ │ ├── ☕ InventoryServiceImpl.java
+│ │ │ │ │ │ ├── ☕ OrderServiceImpl.java
+│ │ │ │ │ │ ├── ☕ PaymentServiceImpl.java
+│ │ │ │ │ │ ├── ☕ ProductServiceImpl.java
+│ │ │ │ │ │ ├── ☕ RefundServiceImpl.java
+│ │ │ │ │ │ ├── ☕ ShiftReportServiceImpl.java
+│ │ │ │ │ │ ├── ☕ StoreAnalyticsServiceImpl.java
+│ │ │ │ │ │ ├── ☕ StoreServiceImpl.java
+│ │ │ │ │ │ ├── ☕ SubscriptionPlanServiceImpl.java
+│ │ │ │ │ │ ├── ☕ SubscriptionServiceImpl.java
+│ │ │ │ │ │ └── ☕ UserServiceImpl.java
+│ │ │ │ │ ├── ☕ AdminDashboardService.java
+│ │ │ │ │ ├── ☕ AuthService.java
+│ │ │ │ │ ├── ☕ BranchAnalyticsService.java
+│ │ │ │ │ ├── ☕ BranchService.java
+│ │ │ │ │ ├── ☕ CategoryService.java
+│ │ │ │ │ ├── ☕ CustomerService.java
+│ │ │ │ │ ├── ☕ EmailService.java
+│ │ │ │ │ ├── ☕ EmployeeService.java
+│ │ │ │ │ ├── ☕ InventoryService.java
+│ │ │ │ │ ├── ☕ OrderService.java
+│ │ │ │ │ ├── ☕ PaymentService.java
+│ │ │ │ │ ├── ☕ ProductService.java
+│ │ │ │ │ ├── ☕ RefundService.java
+│ │ │ │ │ ├── ☕ ShiftReportService.java
+│ │ │ │ │ ├── ☕ StoreAnalyticsService.java
+│ │ │ │ │ ├── ☕ StoreService.java
+│ │ │ │ │ ├── ☕ SubscriptionPlanService.java
+│ │ │ │ │ ├── ☕ SubscriptionService.java
+│ │ │ │ │ └── ☕ UserService.java
+│ │ │ │ ├── 📁 util
+│ │ │ │ │ └── ☕ SecurityUtil.java
+│ │ │ │ └── ☕ PosSystemApplication.java
+│ │ │ └── 📁 resources
+│ │ │ ├── 📁 static
+│ │ │ ├── 📁 templates
+│ │ │ ├── ⚙️ application.yml
+│ │ │ └── ⚙️ docker-compose.yml
+│ │ └── 📁 test
+│ │ └── 📁 java
+│ │ └── 📁 com
+│ │ └── 📁 zosh
+│ │ └── ☕ PosSystemApplicationTests.java
+│ ├── ⚙️ .gitattributes
+│ ├── ⚙️ .gitignore
+│ ├── 📝 HELP.md
+│ ├── 📄 mvnw
+│ ├── 📄 mvnw.cmd
+│ └── ⚙️ pom.xml
+├── 📁 pos-frontend-vite
+│ ├── 📁 public
+│ │ ├── 🖼️ benefits-illustration.svg
+│ │ ├── 🖼️ branch-management-preview.svg
+│ │ ├── 🖼️ header-preview.svg
+│ │ ├── 🖼️ landing-page-preview.svg
+│ │ ├── 🖼️ pos-mockup.svg
+│ │ ├── 🖼️ trusted-logos-preview.svg
+│ │ └── 🖼️ vite.svg
+│ ├── 📁 src
+│ │ ├── 📁 Redux Toolkit
+│ │ │ ├── 📁 features
+│ │ │ │ ├── 📁 adminDashboard
+│ │ │ │ │ ├── 📄 adminDashboardSlice.js
+│ │ │ │ │ └── 📄 adminDashboardThunks.js
+│ │ │ │ ├── 📁 auth
+│ │ │ │ │ ├── 📄 authSlice.js
+│ │ │ │ │ └── 📄 authThunk.js
+│ │ │ │ ├── 📁 branch
+│ │ │ │ │ ├── 📄 branchSlice.js
+│ │ │ │ │ └── 📄 branchThunks.js
+│ │ │ │ ├── 📁 branchAnalytics
+│ │ │ │ │ ├── 📄 branchAnalyticsSlice.js
+│ │ │ │ │ └── 📄 branchAnalyticsThunks.js
+│ │ │ │ ├── 📁 cart
+│ │ │ │ │ └── 📄 cartSlice.js
+│ │ │ │ ├── 📁 category
+│ │ │ │ │ ├── 📄 categorySlice.js
+│ │ │ │ │ └── 📄 categoryThunks.js
+│ │ │ │ ├── 📁 customer
+│ │ │ │ │ ├── 📄 customerSlice.js
+│ │ │ │ │ └── 📄 customerThunks.js
+│ │ │ │ ├── 📁 employee
+│ │ │ │ │ ├── 📄 employeeSlice.js
+│ │ │ │ │ └── 📄 employeeThunks.js
+│ │ │ │ ├── 📁 inventory
+│ │ │ │ │ ├── 📄 inventorySlice.js
+│ │ │ │ │ └── 📄 inventoryThunks.js
+│ │ │ │ ├── 📁 onboarding
+│ │ │ │ │ ├── 📄 onboardingSlice.js
+│ │ │ │ │ └── 📄 onboardingThunk.js
+│ │ │ │ ├── 📁 order
+│ │ │ │ │ ├── 📄 orderSlice.js
+│ │ │ │ │ └── 📄 orderThunks.js
+│ │ │ │ ├── 📁 payment
+│ │ │ │ │ ├── 📄 paymentSlice.js
+│ │ │ │ │ └── 📄 paymentThunks.js
+│ │ │ │ ├── 📁 product
+│ │ │ │ │ ├── 📄 productSlice.js
+│ │ │ │ │ └── 📄 productThunks.js
+│ │ │ │ ├── 📁 refund
+│ │ │ │ │ ├── 📄 refundSlice.js
+│ │ │ │ │ └── 📄 refundThunks.js
+│ │ │ │ ├── 📁 sale
+│ │ │ │ │ ├── 📄 saleSlice.js
+│ │ │ │ │ └── 📄 saleThunks.js
+│ │ │ │ ├── 📁 shiftReport
+│ │ │ │ │ ├── 📄 shiftReportSlice.js
+│ │ │ │ │ └── 📄 shiftReportThunks.js
+│ │ │ │ ├── 📁 store
+│ │ │ │ │ ├── 📄 storeSlice.js
+│ │ │ │ │ └── 📄 storeThunks.js
+│ │ │ │ ├── 📁 storeAnalytics
+│ │ │ │ │ ├── 📄 storeAnalyticsSlice.js
+│ │ │ │ │ └── 📄 storeAnalyticsThunks.js
+│ │ │ │ ├── 📁 subscription
+│ │ │ │ │ ├── 📄 subscriptionSlice.js
+│ │ │ │ │ └── 📄 subscriptionThunks.js
+│ │ │ │ ├── 📁 subscriptionPlan
+│ │ │ │ │ ├── 📄 subscriptionPlanSlice.js
+│ │ │ │ │ └── 📄 subscriptionPlanThunks.js
+│ │ │ │ ├── 📁 transaction
+│ │ │ │ │ ├── 📄 transactionSlice.js
+│ │ │ │ │ └── 📄 transactionThunks.js
+│ │ │ │ └── 📁 user
+│ │ │ │ ├── 📄 userSlice.js
+│ │ │ │ └── 📄 userThunks.js
+│ │ │ └── 📄 globleState.js
+│ │ ├── 📁 assets
+│ │ │ └── 🖼️ react.svg
+│ │ ├── 📁 components
+│ │ │ ├── 📁 ui
+│ │ │ │ ├── 📄 accordion.jsx
+│ │ │ │ ├── 📄 alert-dialog.jsx
+│ │ │ │ ├── 📄 alert.jsx
+│ │ │ │ ├── 📄 aspect-ratio.jsx
+│ │ │ │ ├── 📄 avatar.jsx
+│ │ │ │ ├── 📄 badge.jsx
+│ │ │ │ ├── 📄 breadcrumb.jsx
+│ │ │ │ ├── 📄 button.jsx
+│ │ │ │ ├── 📄 calendar.jsx
+│ │ │ │ ├── 📄 card.jsx
+│ │ │ │ ├── 📄 carousel.jsx
+│ │ │ │ ├── 📄 chart.jsx
+│ │ │ │ ├── 📄 checkbox.jsx
+│ │ │ │ ├── 📄 collapsible.jsx
+│ │ │ │ ├── 📄 command.jsx
+│ │ │ │ ├── 📄 context-menu.jsx
+│ │ │ │ ├── 📄 dialog.jsx
+│ │ │ │ ├── 📄 drawer.jsx
+│ │ │ │ ├── 📄 dropdown-menu.jsx
+│ │ │ │ ├── 📄 form.jsx
+│ │ │ │ ├── 📄 hover-card.jsx
+│ │ │ │ ├── 📄 input-otp.jsx
+│ │ │ │ ├── 📄 input.jsx
+│ │ │ │ ├── 📄 label.jsx
+│ │ │ │ ├── 📄 menubar.jsx
+│ │ │ │ ├── 📄 navigation-menu.jsx
+│ │ │ │ ├── 📄 pagination.jsx
+│ │ │ │ ├── 📄 popover.jsx
+│ │ │ │ ├── 📄 progress.jsx
+│ │ │ │ ├── 📄 radio-group.jsx
+│ │ │ │ ├── 📄 resizable.jsx
+│ │ │ │ ├── 📄 scroll-area.jsx
+│ │ │ │ ├── 📄 select.jsx
+│ │ │ │ ├── 📄 separator.jsx
+│ │ │ │ ├── 📄 sheet.jsx
+│ │ │ │ ├── 📄 sidebar.jsx
+│ │ │ │ ├── 📄 skeleton.jsx
+│ │ │ │ ├── 📄 slider.jsx
+│ │ │ │ ├── 📄 sonner.jsx
+│ │ │ │ ├── 📄 switch.jsx
+│ │ │ │ ├── 📄 table.jsx
+│ │ │ │ ├── 📄 tabs.jsx
+│ │ │ │ ├── 📄 textarea.jsx
+│ │ │ │ ├── 📄 toast.jsx
+│ │ │ │ ├── 📄 toggle-group.jsx
+│ │ │ │ ├── 📄 toggle.jsx
+│ │ │ │ ├── 📄 tooltip.jsx
+│ │ │ │ └── 📄 use-toast.jsx
+│ │ │ ├── 📄 theme-provider.jsx
+│ │ │ └── 📄 theme-toggle.jsx
+│ │ ├── 📁 context
+│ │ │ ├── 📁 hooks
+│ │ │ │ └── 📄 useSidebar.js
+│ │ │ ├── 📄 SidebarContext.jsx
+│ │ │ └── 📄 SidebarProvider.jsx
+│ │ ├── 📁 contexts
+│ │ ├── 📁 hooks
+│ │ │ └── 📄 use-mobile.js
+│ │ ├── 📁 lib
+│ │ │ └── 📄 utils.js
+│ │ ├── 📁 pages
+│ │ │ ├── 📁 Branch Manager
+│ │ │ │ ├── 📁 Customers
+│ │ │ │ │ └── 📄 Customers.jsx
+│ │ │ │ ├── 📁 Dashboard
+│ │ │ │ │ ├── 📄 BranchManagerDashboard.jsx
+│ │ │ │ │ ├── 📄 BranchManagerSidebar.jsx
+│ │ │ │ │ ├── 📄 BranchManagerTopbar.jsx
+│ │ │ │ │ ├── 📄 CashierPerformance.jsx
+│ │ │ │ │ ├── 📄 Dashboard.jsx
+│ │ │ │ │ ├── 📄 PaymentBreakdown.jsx
+│ │ │ │ │ ├── 📄 RecentOrders.jsx
+│ │ │ │ │ ├── 📄 SalesChart.jsx
+│ │ │ │ │ ├── 📄 TodayOverview.jsx
+│ │ │ │ │ └── 📄 TopProducts.jsx
+│ │ │ │ ├── 📁 Employees
+│ │ │ │ │ ├── 📄 BranchEmployees.jsx
+│ │ │ │ │ ├── 📄 EmployeeDialogs.jsx
+│ │ │ │ │ ├── 📄 EmployeeStats.jsx
+│ │ │ │ │ ├── 📄 EmployeeTable.jsx
+│ │ │ │ │ └── 📄 index.js
+│ │ │ │ ├── 📁 Inventory
+│ │ │ │ │ ├── 📄 Inventory.jsx
+│ │ │ │ │ ├── 📄 InventoryFilters.jsx
+│ │ │ │ │ ├── 📄 InventoryFormDialog.jsx
+│ │ │ │ │ ├── 📄 InventoryStats.jsx
+│ │ │ │ │ ├── 📄 InventoryTable.jsx
+│ │ │ │ │ └── 📄 ProductSelect.jsx
+│ │ │ │ ├── 📁 Orders
+│ │ │ │ │ ├── 📄 OrderDetailsDialog.jsx
+│ │ │ │ │ ├── 📄 Orders.jsx
+│ │ │ │ │ ├── 📄 OrdersFilters.jsx
+│ │ │ │ │ ├── 📄 OrdersTable.jsx
+│ │ │ │ │ └── 📄 data.js
+│ │ │ │ ├── 📁 Refunds
+│ │ │ │ │ └── 📄 Refunds.jsx
+│ │ │ │ ├── 📁 Reports
+│ │ │ │ │ └── 📄 Reports.jsx
+│ │ │ │ ├── 📁 Settings
+│ │ │ │ │ ├── 📄 BranchInfo.jsx
+│ │ │ │ │ └── 📄 Settings.jsx
+│ │ │ │ ├── 📁 Transaction
+│ │ │ │ │ ├── 📄 TransactionTable.jsx
+│ │ │ │ │ └── 📄 Transactions.jsx
+│ │ │ │ ├── 📄 data.js
+│ │ │ │ └── 📄 index.js
+│ │ │ ├── 📁 SuperAdminDashboard
+│ │ │ │ ├── 📁 components
+│ │ │ │ │ ├── 📄 SuperAdminSidebar.jsx
+│ │ │ │ │ ├── 📄 SuperAdminTopbar.jsx
+│ │ │ │ │ └── 📄 index.js
+│ │ │ │ ├── 📁 settings
+│ │ │ │ │ ├── 📁 components
+│ │ │ │ │ │ ├── 📄 NotificationSettingsForm.jsx
+│ │ │ │ │ │ ├── 📄 ProfileSettingsForm.jsx
+│ │ │ │ │ │ ├── 📄 SecuritySettingsForm.jsx
+│ │ │ │ │ │ ├── 📄 SystemSettingsForm.jsx
+│ │ │ │ │ │ └── 📄 useSettingsState.js
+│ │ │ │ │ └── 📄 SettingsPage.jsx
+│ │ │ │ ├── 📁 store
+│ │ │ │ │ ├── 📄 PendingRequestsPage.jsx
+│ │ │ │ │ ├── 📄 StoreDetailDrawer.jsx
+│ │ │ │ │ ├── 📄 StoreDetailsPage.jsx
+│ │ │ │ │ ├── 📄 StoreListPage.jsx
+│ │ │ │ │ ├── 📄 StoreStatusBadge.jsx
+│ │ │ │ │ └── 📄 StoreTable.jsx
+│ │ │ │ ├── 📁 subscription
+│ │ │ │ │ ├── 📄 AddPlanDialog.jsx
+│ │ │ │ │ ├── 📄 EditPlanDialog.jsx
+│ │ │ │ │ └── 📄 SubscriptionPlansPage.jsx
+│ │ │ │ ├── 📄 CommissionsPage.jsx
+│ │ │ │ ├── 📄 Dashboard.jsx
+│ │ │ │ ├── 📄 ExportsPage.jsx
+│ │ │ │ ├── 📝 README.md
+│ │ │ │ ├── 📄 SuperAdminDashboard.jsx
+│ │ │ │ └── 📄 index.js
+│ │ │ ├── 📁 auth
+│ │ │ ├── 📁 cashier
+│ │ │ │ ├── 📁 ShiftSummary
+│ │ │ │ │ ├── 📁 components
+│ │ │ │ │ │ ├── 📄 LogoutConfirmDialog.jsx
+│ │ │ │ │ │ ├── 📄 PaymentSummaryCard.jsx
+│ │ │ │ │ │ ├── 📄 PrintDialog.jsx
+│ │ │ │ │ │ ├── 📄 RecentOrdersCard.jsx
+│ │ │ │ │ │ ├── 📄 RefundsCard.jsx
+│ │ │ │ │ │ ├── 📄 SalesSummaryCard.jsx
+│ │ │ │ │ │ ├── 📄 ShiftHeader.jsx
+│ │ │ │ │ │ ├── 📄 ShiftInformationCard.jsx
+│ │ │ │ │ │ ├── 📄 TopSellingItemsCard.jsx
+│ │ │ │ │ │ └── 📄 index.js
+│ │ │ │ │ ├── 📁 data
+│ │ │ │ │ │ └── 📄 mockShiftData.js
+│ │ │ │ │ └── 📄 ShiftSummaryPage.jsx
+│ │ │ │ ├── 📁 Sidebar
+│ │ │ │ │ ├── 📄 BranchInfo.jsx
+│ │ │ │ │ ├── 📄 CashierSideBar.jsx
+│ │ │ │ │ └── 📄 navItems.js
+│ │ │ │ ├── 📁 cart
+│ │ │ │ │ ├── 📄 CartItem.jsx
+│ │ │ │ │ ├── 📄 CartSection.jsx
+│ │ │ │ │ └── 📄 CartSummary.jsx
+│ │ │ │ ├── 📁 components
+│ │ │ │ │ ├── 📄 HeldOrdersDialog.jsx
+│ │ │ │ │ ├── 📄 POSHeader.jsx
+│ │ │ │ │ └── 📄 ReceiptDialog.jsx
+│ │ │ │ ├── 📁 customer
+│ │ │ │ │ ├── 📁 components
+│ │ │ │ │ │ ├── 📄 AddPointsDialog.jsx
+│ │ │ │ │ │ ├── 📄 CustomerCard.jsx
+│ │ │ │ │ │ ├── 📄 CustomerDetails.jsx
+│ │ │ │ │ │ ├── 📄 CustomerList.jsx
+│ │ │ │ │ │ ├── 📄 CustomerSearch.jsx
+│ │ │ │ │ │ ├── 📄 PurchaseHistory.jsx
+│ │ │ │ │ │ └── 📄 index.js
+│ │ │ │ │ ├── 📁 data
+│ │ │ │ │ ├── 📁 utils
+│ │ │ │ │ │ └── 📄 customerUtils.js
+│ │ │ │ │ ├── 📄 CustomerDialog.jsx
+│ │ │ │ │ ├── 📄 CustomerForm.jsx
+│ │ │ │ │ └── 📄 CustomerLookupPage.jsx
+│ │ │ │ ├── 📁 order
+│ │ │ │ │ ├── 📁 OrderDetails
+│ │ │ │ │ │ ├── 📄 CustomerInformation.jsx
+│ │ │ │ │ │ ├── 📄 InvoiceDialog.jsx
+│ │ │ │ │ │ ├── 📄 OrderDetails.jsx
+│ │ │ │ │ │ └── 📄 OrderInformation.jsx
+│ │ │ │ │ ├── 📁 pdf
+│ │ │ │ │ │ ├── 📄 OrderPDF.jsx
+│ │ │ │ │ │ ├── 📄 pdfStyles.jsx
+│ │ │ │ │ │ └── 📄 pdfUtils.jsx
+│ │ │ │ │ ├── 📄 OrderHistoryPage.jsx
+│ │ │ │ │ ├── 📄 OrderTable.jsx
+│ │ │ │ │ └── 📄 data.js
+│ │ │ │ ├── 📁 payment
+│ │ │ │ │ ├── 📄 CustomerPaymentSection.jsx
+│ │ │ │ │ ├── 📄 CustomerSection.jsx
+│ │ │ │ │ ├── 📄 DiscountSection.jsx
+│ │ │ │ │ ├── 📄 NoteSection.jsx
+│ │ │ │ │ ├── 📄 PaymentDialog.jsx
+│ │ │ │ │ ├── 📄 PaymentSection.jsx
+│ │ │ │ │ └── 📄 data.js
+│ │ │ │ ├── 📁 product
+│ │ │ │ │ ├── 📄 ProductCard.jsx
+│ │ │ │ │ └── 📄 ProductSection.jsx
+│ │ │ │ ├── 📁 return
+│ │ │ │ │ ├── 📁 components
+│ │ │ │ │ │ ├── 📄 OrderDetailsSection.jsx
+│ │ │ │ │ │ ├── 📄 OrderTable.jsx
+│ │ │ │ │ │ ├── 📄 ReturnItemsSection.jsx
+│ │ │ │ │ │ ├── 📄 ReturnReceiptDialog.jsx
+│ │ │ │ │ │ └── 📄 index.js
+│ │ │ │ │ └── 📄 ReturnOrderPage.jsx
+│ │ │ │ ├── 📄 CashierDashboardLayout.jsx
+│ │ │ │ ├── 📄 CreateOrderPage.jsx
+│ │ │ │ └── 📝 README.md
+│ │ │ ├── 📁 common
+│ │ │ │ ├── 📁 Auth
+│ │ │ │ │ ├── 📄 Login.jsx
+│ │ │ │ │ └── 📄 ResetPassword.jsx
+│ │ │ │ ├── 📁 Demo
+│ │ │ │ ├── 📁 Landing
+│ │ │ │ │ ├── 📁 components
+│ │ │ │ │ │ ├── 📄 TypewriterText.jsx
+│ │ │ │ │ │ └── 📄 index.js
+│ │ │ │ │ ├── 📄 ContactSection.jsx
+│ │ │ │ │ ├── 📄 FAQSection.jsx
+│ │ │ │ │ ├── 📄 FeatureComparisonSection.jsx
+│ │ │ │ │ ├── 📄 FeatureComparisonTable.jsx
+│ │ │ │ │ ├── 📄 FetureSection.jsx
+│ │ │ │ │ ├── 📄 Footer.jsx
+│ │ │ │ │ ├── 📄 Header.jsx
+│ │ │ │ │ ├── 📄 HeroSection.jsx
+│ │ │ │ │ ├── 📄 KeyFeaturesSection.jsx
+│ │ │ │ │ ├── 📄 Landing.jsx
+│ │ │ │ │ ├── 📄 LiveDemoSection.jsx
+│ │ │ │ │ ├── 📄 MobileAppShowcase.jsx
+│ │ │ │ │ ├── 📄 PricingCalculator.jsx
+│ │ │ │ │ ├── 📄 PricingSection.jsx
+│ │ │ │ │ ├── 📄 TestimonialCarousel.jsx
+│ │ │ │ │ ├── 📄 TrustedLogos.jsx
+│ │ │ │ │ └── 📄 WhyChooseUsSection.jsx
+│ │ │ │ ├── 📁 Order
+│ │ │ │ │ └── 📄 OrderItemTable.jsx
+│ │ │ │ └── 📄 PageNotFound.jsx
+│ │ │ ├── 📁 components
+│ │ │ ├── 📁 onboarding
+│ │ │ │ ├── 📄 Onboarding.jsx
+│ │ │ │ ├── 📄 OwnerDetailsForm.jsx
+│ │ │ │ ├── 📝 README.md
+│ │ │ │ ├── 📄 StoreDetailsForm.jsx
+│ │ │ │ └── 📄 index.js
+│ │ │ └── 📁 store
+│ │ │ ├── 📁 Alerts
+│ │ │ │ ├── 📄 Alerts.jsx
+│ │ │ │ ├── 📄 InactiveCashierTable.jsx
+│ │ │ │ ├── 📄 LowStockProductTable.jsx
+│ │ │ │ ├── 📄 NoSaleTodayBranchTable.jsx
+│ │ │ │ └── 📄 RefundSpikeTable.jsx
+│ │ │ ├── 📁 Branch
+│ │ │ │ ├── 📄 BranchForm.jsx
+│ │ │ │ ├── 📄 BranchTable.jsx
+│ │ │ │ ├── 📄 Branches.jsx
+│ │ │ │ └── 📄 index.js
+│ │ │ ├── 📁 Category
+│ │ │ │ ├── 📄 Categories.jsx
+│ │ │ │ ├── 📄 CategoryForm.jsx
+│ │ │ │ ├── 📄 CategoryTable.jsx
+│ │ │ │ └── 📄 index.js
+│ │ │ ├── 📁 Dashboard
+│ │ │ │ ├── 📄 Dashboard.jsx
+│ │ │ │ ├── 📄 DashboardStats.jsx
+│ │ │ │ ├── 📄 RecentSales.jsx
+│ │ │ │ ├── 📄 SalesTrend.jsx
+│ │ │ │ ├── 📄 StoreDashboard.jsx
+│ │ │ │ ├── 📄 StoreSidebar.jsx
+│ │ │ │ ├── 📄 StoreTopbar.jsx
+│ │ │ │ └── 📄 index.js
+│ │ │ ├── 📁 Employee
+│ │ │ │ ├── 📄 EmployeeForm.jsx
+│ │ │ │ ├── 📄 EmployeeTable.jsx
+│ │ │ │ ├── 📄 StoreEmployees.jsx
+│ │ │ │ └── 📄 index.js
+│ │ │ ├── 📁 Product
+│ │ │ │ ├── 📄 CreateProductForm.jsx
+│ │ │ │ ├── 📄 ProductDetails.jsx
+│ │ │ │ ├── 📄 ProductForm.jsx
+│ │ │ │ ├── 📄 ProductSearch.jsx
+│ │ │ │ ├── 📄 ProductTable.jsx
+│ │ │ │ ├── 📄 Products.jsx
+│ │ │ │ └── 📄 index.js
+│ │ │ ├── 📁 Settings
+│ │ │ │ ├── 📁 components
+│ │ │ │ │ ├── 📄 NotificationSettings.jsx
+│ │ │ │ │ ├── 📄 PaymentSettings.jsx
+│ │ │ │ │ ├── 📄 SecuritySettings.jsx
+│ │ │ │ │ ├── 📄 SettingsContent.jsx
+│ │ │ │ │ ├── 📄 SettingsHeader.jsx
+│ │ │ │ │ ├── 📄 SettingsNavigation.jsx
+│ │ │ │ │ ├── 📄 StoreSettings.jsx
+│ │ │ │ │ ├── 📄 StoreSettingsForm.jsx
+│ │ │ │ │ ├── 📄 ToggleSwitch.jsx
+│ │ │ │ │ ├── 📄 formUtils.js
+│ │ │ │ │ ├── 📄 index.js
+│ │ │ │ │ └── 📄 validation.js
+│ │ │ │ └── 📄 Settings.jsx
+│ │ │ ├── 📁 store-admin
+│ │ │ │ ├── 📄 Reports.jsx
+│ │ │ │ ├── 📄 Sales.jsx
+│ │ │ │ └── 📄 index.js
+│ │ │ ├── 📁 storeInformation
+│ │ │ │ ├── 📁 components
+│ │ │ │ │ ├── 📄 BasicInformation.jsx
+│ │ │ │ │ ├── 📄 ContactInformation.jsx
+│ │ │ │ │ ├── 📄 EditStoreDialog.jsx
+│ │ │ │ │ ├── 📄 EditStoreForm.jsx
+│ │ │ │ │ ├── 📄 EmptyState.jsx
+│ │ │ │ │ ├── 📄 LoadingState.jsx
+│ │ │ │ │ ├── 📄 StoreHeader.jsx
+│ │ │ │ │ ├── 📄 StoreInfoCard.jsx
+│ │ │ │ │ ├── 📄 formUtils.js
+│ │ │ │ │ ├── 📄 index.js
+│ │ │ │ │ └── 📄 validation.js
+│ │ │ │ └── 📄 Stores.jsx
+│ │ │ └── 📁 upgrade
+│ │ │ └── 📄 Upgrade.jsx
+│ │ ├── 📁 routes
+│ │ │ ├── 📄 AuthRoutes.jsx
+│ │ │ ├── 📄 BranchManagerRoutes.jsx
+│ │ │ ├── 📄 CashierRoutes.jsx
+│ │ │ ├── 📄 StoreRoutes.jsx
+│ │ │ └── 📄 SuperAdminRoutes.jsx
+│ │ ├── 📁 utils
+│ │ │ ├── 📄 api.js
+│ │ │ ├── 📄 formateDate.js
+│ │ │ ├── 📄 getPaymentIcon.jsx
+│ │ │ ├── 📄 getStatusColor.js
+│ │ │ ├── 📄 paymentMethodLable.js
+│ │ │ ├── 📄 uploadToCloudinary.js
+│ │ │ └── 📄 userRole.js
+│ │ ├── 🎨 App.css
+│ │ ├── 📄 App.jsx
+│ │ ├── 🎨 index.css
+│ │ └── 📄 main.jsx
+│ ├── ⚙️ .gitignore
+│ ├── 📝 README.md
+│ ├── ⚙️ components.json
+│ ├── 📄 eslint.config.js
+│ ├── 🌐 index.html
+│ ├── ⚙️ jsconfig.app.json
+│ ├── ⚙️ jsconfig.json
+│ ├── ⚙️ package.json
+│ ├── ⚙️ pnpm-lock.yaml
+│ └── 📄 vite.config.js
+└── 📝 README.md
+
+```
+
+---
+
+_Generated by FileTree Pro Extension_
 
 ```
